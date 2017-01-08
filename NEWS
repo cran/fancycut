@@ -1,0 +1,8 @@
+fancycut v0.1.1 (Release date: 2017-01-07)
+===========================================
+
+  Changes:
+
+  * No longer requires a particular version of R.  This requirement in v0.1.0 should not have been there.
+  * Function fancycut can now take ... as an argument.  See help file and examples for more info.
+

@@ -11,14 +11,36 @@
 #'   default is TRUE
 #'   Should the resulting vector be a factor?
 #'   If FALSE will return a character vector.
+#' @param ...
+#'   These take the form \code{tag = value}.
+#'   Tags become the bucket names and values the interval definitions.
+#'   If args are passed in this way \code{intervals} and \code{buckets}
+#'   are both ignored.
 #'
 #' @examples
+#' fancycut(-10:10, c('(0,2]','(2,5)','[5,10]'), c('Small','Medium','Large'))
+#' fancycut(-10:10, c('[0,0]','(0,2]','(2,5)','[5,10]'), c('Zero','Small','Medium','Large'))
+#' fancycut(
+#'   x = -10:10,
+#'   Zero = 0,
+#'   Small = '(0,2]',
+#'   Medium = '(2,5)',
+#'   Large = '[5,10]'
+#' )
 #' fancycut(-10:10, c('(0,2]','(2,5)','[5,10]'), c('Small','Medium','Large'))
 #' fancycut(-10:10, c('[0,0]','(0,2]','(2,5)','[5,10]'), c('Zero','Small','Medium','Large'))
 #' @export
 fancycut <- function(x, intervals, buckets = intervals,
                      na.bucket = NA, unmatched.bucket = NA,
-                     out.as.factor = TRUE) {
+                     out.as.factor = TRUE, ...) {
+
+  # Handle dots first
+  dots <- as.list(substitute(list(...)))[-1L]
+
+  if (length(dots) > 0) {
+    buckets <- names(dots)
+    intervals <- as.character(dots)
+  }
 
   # Make sure that intervals and buckets are the same length
   l <- length(intervals)
@@ -33,6 +55,9 @@ fancycut <- function(x, intervals, buckets = intervals,
 
   out <- rep(NA, length(x))
   for(index in 1:l) {
+
+
+
     i <- intervals[index]
     b <- buckets[index]
     n <- nchar(i[1])
@@ -43,6 +68,7 @@ fancycut <- function(x, intervals, buckets = intervals,
     lower <- as.numeric(bounds[[1]][1])
 
     mask <- rep(FALSE, length(x))
+    if(is.numeric(i)) {mask <- as.numeric(x) == as.numeric(i)}
     if(left == '[' & right == ']') {mask <- x >= lower & x <= upper}
     if(left == '[' & right == ')') {mask <- x >= lower & x <  upper}
     if(left == '(' & right == ']') {mask <- x >  lower & x <= upper}
