@@ -1,5 +1,10 @@
-19f49c2a6fe688a62f026e07d721b94e *DESCRIPTION
-041757ec057df7513858d3deaaa5d22a *NAMESPACE
-f8a3f789c50ddea94890bb5a4ecaaefc *NEWS
-38c8d3cb7980bc52c2b63c8e3396541c *R/fancycut.R
-70aca31273efa03682b5c4d6735e6312 *man/fancycut.Rd
+91fbaa08e0e23ce1c9846d7da2e6b7a4 *DESCRIPTION
+2a92aa9157b9ff1b91584ee0b5988fbf *NAMESPACE
+33a0a48d01dad199b6195c4705e4de0b *NEWS
+8d97b7a24555ec9fbc04ce1cb0b772d0 *R/fancycut.R
+1aecdeb4534027880f6672acb4183280 *man/fancycut.Rd
+434be698d387e2c4732f6fd10028f146 *man/wafflecut.Rd
+9927e99943d4e342cf3b15d32a4933c7 *tests/testthat.R
+55600ae3158121d2ba754571420f839f *tests/testthat/test-NA-bucket-only-when-needed.R
+0d6ab34e0a5c6ced7a3a9db2d26808fc *tests/testthat/test-interval-regex.R
+310a9e8d42da132186cea70352533e09 *tests/testthat/test-wafflecut-split.R

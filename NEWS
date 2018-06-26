@@ -1,3 +1,18 @@
+fancycut v0.1.2 (Release date: 2018-06-20)
+===========================================
+
+  Changes:
+
+  * NA bucket and unmatched bucket only appear in levels of output when needed.
+    https://github.com/adamleerich/fancycut/issues/1
+  * wafflecut now handles the case where intervals and buckets are passed as separate vectors
+    fancycut for when passed as bucket = interval
+  * parsing intervals happens in a separate function and gives warnings when intervals are malformed
+    will still give results, however, just NAs
+  * More tests written
+
+
+
 fancycut v0.1.1 (Release date: 2017-01-07)
 ===========================================
 
