@@ -1,9 +1,9 @@
-91fbaa08e0e23ce1c9846d7da2e6b7a4 *DESCRIPTION
+67ec322721921cb68697e5fd910172bd *DESCRIPTION
 2a92aa9157b9ff1b91584ee0b5988fbf *NAMESPACE
-33a0a48d01dad199b6195c4705e4de0b *NEWS
+2e621f2351fb8a6bdf19adb8c80893a2 *NEWS
 8d97b7a24555ec9fbc04ce1cb0b772d0 *R/fancycut.R
-1aecdeb4534027880f6672acb4183280 *man/fancycut.Rd
-434be698d387e2c4732f6fd10028f146 *man/wafflecut.Rd
+41be688808cc981f9b05bb0bce1ff140 *man/fancycut.Rd
+cc439bccfb6b4b1a34fc072b095c3432 *man/wafflecut.Rd
 9927e99943d4e342cf3b15d32a4933c7 *tests/testthat.R
 55600ae3158121d2ba754571420f839f *tests/testthat/test-NA-bucket-only-when-needed.R
 0d6ab34e0a5c6ced7a3a9db2d26808fc *tests/testthat/test-interval-regex.R

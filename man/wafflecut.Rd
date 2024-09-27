@@ -4,8 +4,14 @@
 \alias{wafflecut}
 \title{Like \code{cut}, turn a vector of numbers into a factor}
 \usage{
-wafflecut(x, intervals, buckets = intervals, na.bucket = NA,
-  unmatched.bucket = NA, out.as.factor = TRUE)
+wafflecut(
+  x,
+  intervals,
+  buckets = intervals,
+  na.bucket = NA,
+  unmatched.bucket = NA,
+  out.as.factor = TRUE
+)
 }
 \arguments{
 \item{x}{a numeric vector}

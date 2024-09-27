@@ -4,8 +4,7 @@
 \alias{fancycut}
 \title{Like \code{cut}, turn a vector of numbers into a factor}
 \usage{
-fancycut(x, na.bucket = NA, unmatched.bucket = NA, out.as.factor = TRUE,
-  ...)
+fancycut(x, na.bucket = NA, unmatched.bucket = NA, out.as.factor = TRUE, ...)
 }
 \arguments{
 \item{x}{a numeric vector}
